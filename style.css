@@ -1,0 +1,137 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #23272f;
+  color: #f3f3f3;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #2c313a;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #0008;
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+.main-content {
+  flex: 2;
+}
+.summary-box {
+  flex: 1;
+  background: #23272f;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 0;
+  min-width: 160px;
+  max-width: 260px;
+  height: fit-content;
+  color: #fff;
+  font-size: 1em;
+  box-shadow: 0 1px 6px #0006;
+  overflow-x: auto;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #ffe066;
+}
+label {
+  display: block;
+  margin: 12px 0 4px 0;
+  font-weight: 500;
+}
+select, input[type=number] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 12px;
+  font-size: 1em;
+  background: #23272f;
+  color: #ffe066;
+}
+.pair-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+.pair-row select {
+  flex: 1;
+}
+.pair-row label {
+  margin: 0 0 0 8px;
+  font-size: 0.95em;
+  font-weight: normal;
+  color: #ffe066;
+  white-space: nowrap;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background: #ffe066;
+  color: #23272f;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #ffd700;
+}
+.output {
+  background: #23272f;
+  border-radius: 8px;
+  margin-top: 24px;
+  padding: 16px;
+  color: #fff;
+  font-size: 1em;
+  min-height: 40px;
+}
+.step {
+  margin-bottom: 4px;
+}
+.counts {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #ffe066;
+}
+.loot-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 0.98em;
+  table-layout: fixed;
+}
+.loot-table th, .loot-table td {
+  border: 1px solid #444;
+  padding: 4px 8px;
+  text-align: center;
+  word-break: break-word;
+}
+.loot-table th {
+  background: #23272f;
+  color: #ffe066;
+}
+.loot-yellow { color: #ffe066; }
+.loot-purple { color: #b266ff; }
+.loot-blue { color: #66b2ff; }
+/* Color styles for select options (for fallback) */
+.yellow-option { color: #ffe066; }
+.purple-option { color: #b266ff; }
+.blue-option { color: #66b2ff; }
+#numPairs {
+  width: 424px;
+  min-width: 0;
+  max-width: 100%;
+}
+#rainbow-title {
+  text-shadow: 0 0 2px #fff, 0 0 2px #fff;
+} 
