@@ -3,36 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="POE Harvest Color Maximizer - Optimize your Path of Exile harvest farming strategy">
+  <meta name="keywords" content="Path of Exile, POE, harvest, farming, calculator, optimization">
   <title>POE Harvest Color Maximizer</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="main-content">
-      <h1 id="rainbow-title">pov's math time</h1>
-      <div style="display: flex; gap: 12px; align-items: flex-start;">
-        <div style="flex: 1;">
-          <label for="numPairs">Number of pairs</label>
-          <input type="number" id="numPairs" min="1" max="10" value="3">
+  <main class="container">
+    <header class="header">
+      <h1 id="rainbow-title" class="title">pov's math time</h1>
+    </header>
+    
+    <div class="app-layout">
+      <aside class="left-sidebar">
+        <div class="summary-box">
+          <h2 class="summary-title">Lifeforce Calculator</h2>
+          <div class="lifeforce-calculator">
+            <div class="input-row">
+              <span class="emoji-label">🟡</span>
+              <input type="number" id="vividGained" class="lifeforce-input" value="0" min="0">
+            </div>
+            <div class="input-row">
+              <span class="emoji-label">🔵</span>
+              <input type="number" id="primalGained" class="lifeforce-input" value="0" min="0">
+            </div>
+            <div class="input-row">
+              <span class="emoji-label">🔴</span>
+              <input type="number" id="wildGained" class="lifeforce-input" value="0" min="0">
+            </div>
+            <div class="total-value">
+              <strong>Total Value:</strong>
+              <div><span id="totalValue">0</span> chaos</div>
+              <div><span id="totalDivValue">0</span> divine</div>
+            </div>
+            <button id="clearCalc" class="clear-button">Clear</button>
+          </div>
         </div>
-      </div>
-      <div id="pairsContainer"></div>
-      <label for="maximizeColor">Color to maximize</label>
-      <select id="maximizeColor">
-        <option style="color:#ffe066;">Yellow</option>
-        <option style="color:#b266ff;">Purple</option>
-        <option style="color:#66b2ff;">Blue</option>
-      </select>
-      <button id="calcBtn">Start Step-by-Step</button>
-      <div class="output" id="stepOutput"></div>
+        
+        <div class="summary-box">
+          <h2 class="summary-title">Market Values</h2>
+          <div class="price-timestamp" id="priceTimestamp">
+            <small>Loading price data...</small>
+          </div>
+          <div class="market-values">
+            <div class="value-row">
+              <span class="emoji-label">🟡</span>
+              <input type="number" id="vividRate" class="price-input" value="34.0" step="0.1" min="0">
+              <span class="currency-label">per 1c</span>
+            </div>
+            <div class="value-row">
+              <span class="emoji-label">🔵</span>
+              <input type="number" id="primalRate" class="price-input" value="36.7" step="0.1" min="0">
+              <span class="currency-label">per 1c</span>
+            </div>
+            <div class="value-row">
+              <span class="emoji-label">🔴</span>
+              <input type="number" id="wildRate" class="price-input" value="38.0" step="0.1" min="0">
+              <span class="currency-label">per 1c</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+      
+      <section class="main-content">
+        <div class="controls-section">
+          <div class="input-group">
+            <label for="numPairs" class="label">Number of pairs</label>
+            <input 
+              type="number" 
+              id="numPairs" 
+              min="1" 
+              max="10" 
+              value="3"
+              class="input-field"
+              aria-describedby="numPairs-help"
+            >
+            <div id="numPairs-help" class="help-text">Enter the number of harvest pairs (1-10)</div>
+          </div>
+          
+          <div class="input-group">
+            <label for="maximizeColor" class="label">Color to maximize</label>
+            <select id="maximizeColor" class="select-field" aria-describedby="maximizeColor-help">
+              <option value="Yellow" style="color:#ffe066;">Yellow</option>
+              <option value="Purple" style="color:#b266ff;">Purple</option>
+              <option value="Blue" style="color:#66b2ff;">Blue</option>
+            </select>
+            <div id="maximizeColor-help" class="help-text">Choose which color to prioritize for higher tier rewards</div>
+          </div>
+        </div>
+        
+        <section class="pairs-section">
+          <h2 class="section-title">Harvest Pairs</h2>
+          <div id="pairsContainer" class="pairs-container" role="group" aria-label="Harvest color pairs"></div>
+        </section>
+        
+        <div class="action-section">
+          <button id="calcBtn" class="primary-button" type="button">
+            Start Step-by-Step Analysis
+          </button>
+        </div>
+
+        <section class="results-section">
+          <div id="stepOutput" class="step-output" role="region" aria-live="polite" aria-label="Step-by-step analysis results"></div>
+        </section>
+      </section>
+      
+      <aside class="right-sidebar">
+        <div class="summary-box">
+          <h2 class="summary-title">Loot Summary</h2>
+          <div id="lootSummaryContent" class="summary-content"></div>
+          <div id="lootPieChart" class="chart-container" role="img" aria-label="Loot distribution pie chart"></div>
+        </div>
+      </aside>
     </div>
-    <div class="summary-box" id="lootSummary">
-      <b>Loot Summary</b>
-      <div id="lootSummaryContent"></div>
-      <div id="lootPieChart" style="margin-top: 24px;"></div>
-    </div>
-  </div>
+  </main>
+  
   <script src="app.js"></script>
 </body>
-</html> 
+</html>
