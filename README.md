@@ -1,12 +1,17 @@
 # POE Harvest Color Maximizer - Improved Version
 
+[![Update Lifeforce Prices](https://github.com/povtupsukarp/povtupsukarp.github.io/actions/workflows/update-prices.yml/badge.svg)](https://github.com/povtupsukarp/povtupsukarp.github.io/actions/workflows/update-prices.yml)
+
 An optimized Path of Exile harvest calculator tool that helps players maximize their harvest farming efficiency through strategic color selection.
 
 ## Features
 
 - **Step-by-step optimization**: Interactive decision making with optimal choice recommendations
+- **Live market integration**: Real-time lifeforce prices from poe.ninja API
+- **Lifeforce calculator**: Calculate harvest value in both chaos and divine orbs
 - **Visual feedback**: Real-time pie chart visualization of loot distribution
 - **Responsive design**: Works on desktop and mobile devices
+- **Automated price updates**: GitHub Actions automatically fetch current market prices every 6 hours
 - **Accessibility**: ARIA labels and keyboard navigation support
 - **Error handling**: Comprehensive input validation and error messages
 - **Performance optimized**: Efficient DOM manipulation and reduced memory usage
