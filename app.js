@@ -421,7 +421,13 @@ const UI = {
   },
   
   getDivineRatio: () => {
-    return fetch(`lifeforce_prices.json?t=${Date.now()}`)
+    return fetch(`lifeforce_prices.json?t=${Date.now()}`, {
+      cache: 'no-cache',
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache'
+      }
+    })
       .then(response => response.json())
       .then(data => data.divine_chaos_ratio || 0)
       .catch(() => 0);
@@ -435,7 +441,13 @@ const UI = {
   },
   
   loadPriceTimestamp: () => {
-    fetch(`lifeforce_prices.json?t=${Date.now()}`)
+    fetch(`lifeforce_prices.json?t=${Date.now()}`, {
+      cache: 'no-cache',
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache'
+      }
+    })
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}`);
