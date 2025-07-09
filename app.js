@@ -421,7 +421,7 @@ const UI = {
   },
   
   getDivineRatio: () => {
-    return fetch('lifeforce_prices.json')
+    return fetch(`lifeforce_prices.json?t=${Date.now()}`)
       .then(response => response.json())
       .then(data => data.divine_chaos_ratio || 0)
       .catch(() => 0);
@@ -435,9 +435,15 @@ const UI = {
   },
   
   loadPriceTimestamp: () => {
-    fetch('lifeforce_prices.json')
-      .then(response => response.json())
+    fetch(`lifeforce_prices.json?t=${Date.now()}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        return response.json();
+      })
       .then(data => {
+        console.log('Price data loaded:', data);
         const lastUpdated = new Date(data.last_updated);
         const now = new Date();
         const timeDiff = now - lastUpdated;
