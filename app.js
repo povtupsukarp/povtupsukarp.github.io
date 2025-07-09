@@ -40,8 +40,8 @@ const CONFIG = {
   },
   
   LIMITS: {
-    MIN_PAIRS: 1,
-    MAX_PAIRS: 10,
+    MIN_PAIRS: 2,
+    MAX_PAIRS: 6,
     DEFAULT_PAIRS: 3
   }
 };
