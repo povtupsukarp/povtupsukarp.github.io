@@ -1,31 +1,31 @@
 {
-  "last_updated": "2025-07-10T13:48:34.533508",
+  "last_updated": "2025-07-10T18:54:36.581990",
   "league": "Mercenaries",
   "prices": {
     "wild": {
       "price": 0.0271,
       "lifeforce_per_chaos": 36.9,
       "chaos_equivalent": 0.03,
-      "pay_value": 37.55,
-      "receive_value": 0.027105,
+      "pay_value": 35.84,
+      "receive_value": 0.0271284,
       "currency_name": "Wild Crystallised Lifeforce"
     },
     "vivid": {
       "price": 0.0313,
-      "lifeforce_per_chaos": 32.0,
+      "lifeforce_per_chaos": 31.9,
       "chaos_equivalent": 0.03,
-      "pay_value": 20.83452,
-      "receive_value": 0.031275,
+      "pay_value": 21.875532,
+      "receive_value": 0.031302,
       "currency_name": "Vivid Crystallised Lifeforce"
     },
     "primal": {
       "price": 0.0271,
       "lifeforce_per_chaos": 36.9,
       "chaos_equivalent": 0.03,
-      "pay_value": 31.265,
-      "receive_value": 0.027105,
+      "pay_value": 30.0,
+      "receive_value": 0.0271284,
       "currency_name": "Primal Crystallised Lifeforce"
     }
   },
-  "divine_chaos_ratio": 208.5
+  "divine_chaos_ratio": 208.68
 }
