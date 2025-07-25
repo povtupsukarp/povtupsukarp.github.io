@@ -1,12 +1,12 @@
 {
-  "last_updated": "2025-07-25T03:52:48.307545",
+  "last_updated": "2025-07-25T06:59:55.729002",
   "league": "Mercenaries",
   "prices": {
     "vivid": {
       "price": 0.0435,
       "lifeforce_per_chaos": 23.0,
       "chaos_equivalent": 0.04,
-      "pay_value": 21.96,
+      "pay_value": 22.05,
       "receive_value": 0.04348,
       "currency_name": "Vivid Crystallised Lifeforce"
     },
@@ -14,7 +14,7 @@
       "price": 0.0279,
       "lifeforce_per_chaos": 35.9,
       "chaos_equivalent": 0.03,
-      "pay_value": 32.143608,
+      "pay_value": 31.84559,
       "receive_value": 0.02786,
       "currency_name": "Wild Crystallised Lifeforce"
     },
